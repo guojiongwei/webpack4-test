@@ -21,7 +21,6 @@ const CompressionWebpackPlugin = require('compression-webpack-plugin')
 // 拷贝静态资源插件
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const AutoDllPlugin = require('autodll-webpack-plugin');
-console.log(resolve('./../dist/static'))
 module.exports = smart(baseConfig, {
   mode: 'production',
   // devtool: "eval",
@@ -79,6 +78,31 @@ module.exports = smart(baseConfig, {
     new AutoDllPlugin({
       inject: true,
       filename: '[name].[hash].js',
+      plugins: [
+        new UglifyjsWebpackPlugin({
+          test: /\.js$/,
+          cache: true,
+          parallel: 3,
+          sourceMap: false,
+          uglifyOptions: {
+            warnings: false,
+            parse: {},
+            compress: {
+              warnings: false,
+              drop_console: true, // 打包后去除console.log
+              collapse_vars: true, // 内嵌定义了但是只用到一次的变量
+              reduce_vars: true, // 提取出出现多次但是没有定义成变量去引用的静态值
+              pure_funcs: ['console.log']
+            },
+            mangle: true, // Note `mangle.properties` is `false` by default.
+            output: null,
+            toplevel: false,
+            nameCache: null,
+            ie8: false,
+            keep_fnames: false,
+          }
+        })
+      ],
       entry: {
         vendor: [
           "axios",

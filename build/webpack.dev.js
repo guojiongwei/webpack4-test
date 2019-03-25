@@ -12,7 +12,7 @@ module.exports = smart(baseConfig, {
   devtool: "eval",
   devServer: {
     port: 8080,
-    contentBase: './../dist',
+    contentBase: resolve('./../dist'),
     progress: true,
     quiet: false,
     inline: true, //自动刷新
