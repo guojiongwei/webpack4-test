@@ -21,7 +21,7 @@ const CompressionWebpackPlugin = require('compression-webpack-plugin')
 // 拷贝静态资源插件
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const AutoDllPlugin = require('autodll-webpack-plugin');
-
+console.log(resolve('./../dist/static'))
 module.exports = smart(baseConfig, {
   mode: 'production',
   // devtool: "eval",
@@ -66,6 +66,7 @@ module.exports = smart(baseConfig, {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin([resolve('./../dist/static')]),
     new HtmlWebpackPlugin({
         inject: true, // will inject the main bundle to index.html
         template: resolve('./../index.html'),
@@ -76,9 +77,9 @@ module.exports = smart(baseConfig, {
         }
     }),
     new AutoDllPlugin({
-        inject: true,
-        filename: '[name].[hash].js',
-        entry: {
+      inject: true,
+      filename: '[name].[hash].js',
+      entry: {
         vendor: [
           "axios",
           "fetch-jsonp",
@@ -117,9 +118,8 @@ module.exports = smart(baseConfig, {
       asset: '[path].gz[query]',
       algorithm: 'gzip',
       test: /\.(js|css)$/,
-      threshold: 1024, //只有大小大于该值的资源会被处理。默认值是 0
+      threshold: 10240, //只有大小大于该值的资源会被处理。默认值是 10k
       minRatio: 0.8 //只有压缩率小于这个值的资源才会被处理,默认值是 0.8
-    }),
-    new CleanWebpackPlugin([resolve('./../dist/static')])
+    })
   ]
 })
