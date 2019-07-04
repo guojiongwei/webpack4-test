@@ -46,7 +46,7 @@ module.exports = {
             options: {
             plugins: [
                 require('autoprefixer')({
-                    browsers : ['last 100 versions']
+                  overrideBrowserslist : ['last 100 versions']
                 })
               ]
             }

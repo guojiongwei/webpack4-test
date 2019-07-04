@@ -6,9 +6,8 @@ const baseConfig = require('./webpack.base.js')
 const { smart } = require('webpack-merge')
 // html插件，可以自动引入打包后的js和css
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-// 清除文件插件,每次build都可以吧原先打包的文件删掉
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
-
+// 清除文件插件,每次build都可以吧原先打包的文件删掉
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 // 可以把css从js中抽离出来的插件
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -45,10 +44,8 @@ module.exports = smart(baseConfig, {
         parallel: 3,
         sourceMap: false,
         uglifyOptions: {
-          warnings: false,
           parse: {},
           compress: {
-            warnings: false,
             drop_console: true, // 打包后去除console.log
             collapse_vars: true, // 内嵌定义了但是只用到一次的变量
             reduce_vars: true, // 提取出出现多次但是没有定义成变量去引用的静态值
@@ -85,10 +82,8 @@ module.exports = smart(baseConfig, {
           parallel: 3,
           sourceMap: false,
           uglifyOptions: {
-            warnings: false,
             parse: {},
             compress: {
-              warnings: false,
               drop_console: true, // 打包后去除console.log
               collapse_vars: true, // 内嵌定义了但是只用到一次的变量
               reduce_vars: true, // 提取出出现多次但是没有定义成变量去引用的静态值
