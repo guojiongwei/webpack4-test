@@ -35,9 +35,9 @@ export default class Details extends React.Component {
 		console.log(authorid)
 		console.log(bookid)
 		
-		$.ajax({		url: "http://read.xiaoshuo1-sm.com/novel/i.php?do=is_caterank&p=1&page="+page+"&words=&shuqi_h5=&onlyCpBooks=1&secondCate=" + gid + "&sort=monthHot&_=1510843580965",
+		$.ajax({		url: "http://read.xiaoshuo1-sm.com/novel/i.php?do=is_caterank&p=1&page="+page+"&words=&shuqi_h5=&onlyCpBooks=1&secondCate=" + gid + "&sort=monthHot&_=",
 			success: function(data) {
-				console.log(data.data)
+				console.log('22222',data)
 				var datas = data.data;
 				var obj = datas[id]
 				console.log(obj)
@@ -47,9 +47,9 @@ export default class Details extends React.Component {
 			}
 		})
 		$.ajax({
-			url: "http://read.xiaoshuo1-sm.com/novel/i.php?do=sp_get&authorId="+authorid+"&bookId="+bookid+"&fetch=merge&sqUid=888154902&source=store&size=3&page=1&shuqi_h5=&_=1511079311858",
+			url: "http://read.xiaoshuo1-sm.com/novel/i.php?do=sp_get&authorId="+authorid+"&bookId="+bookid+"&fetch=merge&sqUid=888154902&source=store&size=3&page=1&shuqi_h5=&_=",
 			success: function(data) {
-			//	console.log(data.data)
+				console.log(222, data.data)
 				that.setState({
 					pinlun:data.data
 				})
@@ -118,14 +118,14 @@ export default class Details extends React.Component {
 		var arr1 = [];
 		var pinlun = this.state.pinlun;
 		
-		for(var item1 of pinlun){
+		pinlun.map(item1 => {
 			console.log(item1)
 			arr1.push(<div key={item1.text} style={{width:'100%',padding:'0.1rem',float:'left',overflow:'hidden',height:'0.8rem',borderBottom:'1px solid #999'}}>
 				
 				<p><img style={{width:'0.24rem',height:'0.24rem'}} src={item1.userPhoto} /><span style={{marginLeft:'0.1rem',color:'#999'}}>{item1.nickName}</span></p>
 			    <p style={{textIndent:'0.4rem'}}>{item1.text}</p>
 			</div>)
-		}
+		})
 		
 		return(
 			<div className='DetailsContent'>
