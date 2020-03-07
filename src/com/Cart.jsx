@@ -24,7 +24,7 @@ export default class CartHeader extends React.Component {
 		that.setState({
 			books: books
 		})
-var books = JSON.parse(localStorage.getItem('books'))
+var books = JSON.parse(localStorage.getItem('books'))||[]
 		if(books.length==0){
 			$('.kong').show()
 		}else{
@@ -35,7 +35,7 @@ var books = JSON.parse(localStorage.getItem('books'))
 		showToast()
 		var that = this;
 		console.log(index)
-		var books = JSON.parse(localStorage.getItem('books'))
+		var books = JSON.parse(localStorage.getItem('books')) || []
 		console.log(books)
 		books.splice(index, 1)
 		if(books.length==0){
@@ -53,7 +53,7 @@ var books = JSON.parse(localStorage.getItem('books'))
 
 	render() {
 		var arr = [];
-		var data = this.state.books;
+		var data = this.state.books || [];
 		for(var i = 0; i < data.length; i++) {
 			//	console.log(data[i])
 			var item = data[i]

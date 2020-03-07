@@ -6,11 +6,11 @@ export default class Home extends React.Component {
 		super(props);
 		this.state = {
 			img: [{
-					'img': 'http://c-shuqi.11222.cn/assets/logo_7a44de2.png',
+					'img': 'http://c-shuqi.11222.cn/assets/logo_f4f29b2.png',
 					'path':'/home'
 				},
 				{
-					'img': 'http://c-shuqi.11222.cn/assets/website-name_c08f935.png',
+					'img': 'http://c-shuqi.11222.cn/assets/website-name_1b665a8.png',
 					"path":'/home'
 				},
 				
@@ -19,11 +19,11 @@ export default class Home extends React.Component {
 				    "path":'/user'
 				},
 				{
-					'img': 'http://c-shuqi.11222.cn/assets/bookshelf_606cf21.png',
+					'img': 'http://c-shuqi.11222.cn/assets/bookshelf_0322254.png',
 					'path':'/cart'
 				},
 				{
-					'img': 'http://c-shuqi.11222.cn/assets/search_d5e5264.png',
+					'img': 'http://c-shuqi.11222.cn/assets/search_4e18a23.png',
 					'path':'/search'
 				}
 

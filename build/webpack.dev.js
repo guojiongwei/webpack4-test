@@ -9,12 +9,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 module.exports = smart(baseConfig, {
   mode: 'development',
-  devtool: "eval",
+  devtool: "source-map",
   devServer: {
     port: 8080,
     contentBase: resolve('./../dist'),
     progress: true,
-    quiet: false,
+    quiet: true,
     inline: true, //自动刷新
     open: false, //自动打开浏览器
     historyApiFallback: true,
