@@ -1,6 +1,8 @@
 import React from 'react'
 import {Route, BrowserRouter} from 'react-router-dom'
 import asyncComponent from './router/asyncComponent'
+
+import './scss/List.scss'
 const _import_com = file => asyncComponent(() => import(`com/${file}`))
 export default class App extends React.Component{
     constructor(props){

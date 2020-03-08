@@ -9,7 +9,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 module.exports = smart(baseConfig, {
   mode: 'development',
-  devtool: "source-map",
+  devtool: "#source-map",
   devServer: {
     port: 8080,
     contentBase: resolve('./../dist'),

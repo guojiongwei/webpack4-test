@@ -109,16 +109,16 @@ add(){
       <a className='mulu' href={'http://t.shuqi.com/route.php?pagename=#!/ct/chapterList/bid/'+item.bookid}><time className='iconfont icon-mulu'></time>目录<span className='iconfont icon-gengduo'></span></a>
         </div>)
 		var arr1 = [];
-		var pinlun = this.state.pinlun;
+		var pinlun = this.state.pinlun||[];
 		
-		for(var item1 of pinlun){
+		pinlun.map(item1 => {
 			console.log(item1)
 			arr1.push(<div key={item1.text} style={{width:'100%',padding:'0.1rem',float:'left',overflow:'hidden',height:'0.8rem',borderBottom:'1px solid #999'}}>
 				
 				<p><img style={{width:'0.24rem',height:'0.24rem'}} src={item1.userPhoto} /><span style={{marginLeft:'0.1rem',color:'#999'}}>{item1.nickName}</span></p>
 			    <p style={{textIndent:'0.4rem'}}>{item1.text}</p>
 			</div>)
-		}
+		})
 		return(
 			<div className='DetailsContent'>{arr}
 			<div style={{width:'100%',height:'0.4rem',borderBottom:'1px solid #eee',lineHeight:'0.4rem',textIndent:'0.1rem',color:'#00afc7'}}>精华评论</div>

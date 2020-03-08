@@ -1,9 +1,8 @@
 import React from 'react';
+import './../scss/Racklist.scss'
 import $ from 'jquery'
 import { NavLink } from 'react-router-dom'
-import './../scss/Racklist.scss'
 import { Toast } from 'antd-mobile';
-
 function showToast() {
   Toast.info('加载中。。。');
 }

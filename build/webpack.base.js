@@ -39,8 +39,8 @@ module.exports = {
       },
       {
         test: /\.(css|scss)$/,
-        include: [resolve('./../src')],
-        exclude: /node_modules/,
+        include: [resolve('./../src'), /node_modules/],
+        // exclude: /node_modules/,
         use: [ MiniCssExtractPlugin.loader, 'css-loader', {
             loader: 'postcss-loader',
             options: {
@@ -117,7 +117,7 @@ module.exports = {
               ["@babel/plugin-proposal-class-properties", { "loose" : true }
               ],
               "@babel/plugin-transform-runtime",
-              '@babel/plugin-syntax-dynamic-import'
+              // '@babel/plugin-syntax-dynamic-import'
             ],
             cacheDirectory: true
           }

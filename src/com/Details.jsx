@@ -116,7 +116,7 @@ export default class Details extends React.Component {
 		
 		
 		var arr1 = [];
-		var pinlun = this.state.pinlun;
+		var pinlun = this.state.pinlun || [];
 		
 		pinlun.map(item1 => {
 			console.log(item1)
