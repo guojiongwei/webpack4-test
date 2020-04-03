@@ -21,7 +21,7 @@ module.exports = {
     path: resolve('./../dist'),
     chunkFilename: assetsPath('js/[name].[hash:8].js'),
     // 打包后文件的公共前缀路径 可设置http或https
-    publicPath: '/'
+    publicPath: './'
   },
   module: {
     noParse: /jquery/,

@@ -51,7 +51,7 @@ constructor(props){
 componentDidMount(){
 	var that = this;
 	$.ajax({
-		url:'http://bookstoreapi.shuqireader.com/eva_bookstore/v1/module/query?appId=1&pageId=1&channelId=&versionId=&ver=&shuqi_h5=&md5key=&userId=888154902&timestamp=1511012659&type=2&resetcache=&func_id=24%2C20%2C11%2C19%2C33&orderid=1%2C3%2C4%2C6%2C7&sign=50F438A0BC3F1B640A49F04542DD1FBE&key=shuqiapi&_=1511012659929',		
+		url:'http://bookstoreapi.shuqireader.com/eva_bookstore/v1/module/query?appId=1&pageId=1&channelId=&versionId=&ver=&shuqi_h5=&md5key=&userId=8000000&timestamp=1585907143&type=2&resetcache=&func_id=11%2C33%2C11%2C19%2C33%2C11%2C33%2C11%2C19%2C33&orderid=10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19&sign=13F8644CC5A52E08D7620F0C3ECB3E5A&key=shuqiapi&_=1585907143376',		
 		success:function(data){
 			//console.log(data.data.module[3].content);
 			that.setState({
@@ -61,7 +61,7 @@ componentDidMount(){
 		}
 	})
 	$.ajax({
-		url:'http://bookstoreapi.shuqireader.com/eva_bookstore/v1/module/query?appId=1&pageId=1&channelId=&versionId=&ver=&shuqi_h5=&md5key=&userId=888154902&timestamp=1511085060&type=2&resetcache=&func_id=11%2C33%2C11%2C19%2C33%2C11%2C33%2C11%2C19%2C33&orderid=8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17&sign=FC8AB0DFF20A3EB7B3D963DA394BD0A8&key=shuqiapi&_=1511085060033',
+		url:'http://bookstoreapi.shuqireader.com/eva_bookstore/v1/module/query?appId=1&pageId=1&channelId=&versionId=&ver=&shuqi_h5=&md5key=&userId=8000000&timestamp=1585907143&type=2&resetcache=&func_id=11%2C33%2C11%2C19%2C33%2C11%2C33%2C11%2C19%2C33&orderid=10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19&sign=13F8644CC5A52E08D7620F0C3ECB3E5A&key=shuqiapi&_=1585907143376',
 		
 		success:function(data){
 			var datag = data.data.module[3];
@@ -79,7 +79,7 @@ componentDidMount(){
 shuaxin(){
   var that = this;
 	$.ajax({
-		url:'http://bookstoreapi.shuqireader.com/eva_bookstore/v1/module/query?appId=1&pageId=1&channelId=&versionId=&ver=&shuqi_h5=&md5key=&userId=888154902&timestamp=1511012659&type=2&resetcache=&func_id=24%2C20%2C11%2C19%2C33&orderid=1%2C3%2C4%2C6%2C7&sign=50F438A0BC3F1B640A49F04542DD1FBE&key=shuqiapi&_=1511012659929',
+		url:'http://bookstoreapi.shuqireader.com/eva_bookstore/v1/module/query?appId=1&pageId=1&channelId=&versionId=&ver=&shuqi_h5=&md5key=&userId=8000000&timestamp=1585907143&type=2&resetcache=&func_id=11%2C33%2C11%2C19%2C33%2C11%2C33%2C11%2C19%2C33&orderid=10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19&sign=13F8644CC5A52E08D7620F0C3ECB3E5A&key=shuqiapi&_=1585907143376',
 		
 		success:function(data){
 			//console.log(data.data.module[3].content);
@@ -95,7 +95,7 @@ shuaxin(){
 shuaxin1(){
 	var that = this;
 	$.ajax({
-		url:'http://bookstoreapi.shuqireader.com/eva_bookstore/v1/module/query?appId=1&pageId=1&channelId=&versionId=&ver=&shuqi_h5=&md5key=&userId=888154902&timestamp=1511085060&type=2&resetcache=&func_id=11%2C33%2C11%2C19%2C33%2C11%2C33%2C11%2C19%2C33&orderid=8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17&sign=FC8AB0DFF20A3EB7B3D963DA394BD0A8&key=shuqiapi&_=1511085060033',
+		url:'http://bookstoreapi.shuqireader.com/eva_bookstore/v1/module/query?appId=1&pageId=1&channelId=&versionId=&ver=&shuqi_h5=&md5key=&userId=8000000&timestamp=1585907143&type=2&resetcache=&func_id=11%2C33%2C11%2C19%2C33%2C11%2C33%2C11%2C19%2C33&orderid=10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19&sign=13F8644CC5A52E08D7620F0C3ECB3E5A&key=shuqiapi&_=1585907143376',
 		
 		success:function(data){
 			var datag = data.data.module[3];
@@ -112,7 +112,7 @@ shuaxin1(){
 shuaxin2(){
 	var that = this;
 	$.ajax({
-		url:'http://bookstoreapi.shuqireader.com/eva_bookstore/v1/module/query?appId=1&pageId=1&channelId=&versionId=&ver=&shuqi_h5=&md5key=&userId=888154902&timestamp=1511085060&type=2&resetcache=&func_id=11%2C33%2C11%2C19%2C33%2C11%2C33%2C11%2C19%2C33&orderid=8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17&sign=FC8AB0DFF20A3EB7B3D963DA394BD0A8&key=shuqiapi&_=1511085060033',
+		url:'http://bookstoreapi.shuqireader.com/eva_bookstore/v1/module/query?appId=1&pageId=1&channelId=&versionId=&ver=&shuqi_h5=&md5key=&userId=8000000&timestamp=1585907143&type=2&resetcache=&func_id=11%2C33%2C11%2C19%2C33%2C11%2C33%2C11%2C19%2C33&orderid=10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19&sign=13F8644CC5A52E08D7620F0C3ECB3E5A&key=shuqiapi&_=1585907143376',
 		
 		success:function(data){
 			var datag = data.data.module[3];
